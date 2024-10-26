@@ -18,7 +18,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='bg-accent text-main text-center text-3xl font-medium p-5 md:mt-[6.7rem] mt-[7.25rem]'>
+        <div className='bg-accent text-main text-center text-3xl font-medium p-5 md:mt-[6.7rem] mt-[6rem]'>
             <p>Brought to you by TMD.</p>
         </div>
       </div>
