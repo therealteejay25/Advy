@@ -3,6 +3,7 @@ import { db } from '../../firebaseConfig';
 import { collection, getDocs, doc, setDoc, getDoc } from 'firebase/firestore';
 import Logo from '../../Logo Pack/logo.svg';
 import loader from '../../loader.png';
+import { useNavigate } from 'react-router-dom';
 
 const Schedule = () => {
     const [availableSlots, setAvailableSlots] = useState([]);
@@ -13,6 +14,7 @@ const Schedule = () => {
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const canvasRef = useRef(null); // Reference for the canvas
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchBookedSlots = async () => {
@@ -75,7 +77,7 @@ const Schedule = () => {
         document.body.removeChild(link); // Clean up
     
         // Redirect to another page (replace '/your-next-page' with the actual path)
-        window.location.href = '/download';
+        navigate("/download")
     };
     
 
